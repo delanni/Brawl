@@ -1,0 +1,16 @@
+{
+  "name": "nko4-madison-ivy",
+  "version": "0.0.1",
+  "description": "Madison Ivy and the Gang",
+  "main": "server.js",
+  "scripts": {
+    "start": "./run.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:nko4/madison-ivy.git"
+  },
+  "dependencies": {
+    "nko": "*"
+  }
+}

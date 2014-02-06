@@ -1,0 +1,232 @@
+@font-face {
+    font-family: 'Minecraftia';
+    src: url('/fonts/Minecraftia.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html, body {
+    font-family: "Minecraftia";
+    margin: 0;
+    padding: 0;
+	height: 100%;
+}
+
+.loadingVeil {
+    display: block;
+    position: absolute;
+    background: #0047ff;
+    height: 100%;
+    width: 100%;
+    opacity: 1;
+    background-size: cover;
+    text-align: center;
+    z-index: 1000;
+}
+
+.waitingVeil {
+    display: block;
+    position: absolute;
+    background: #0047ff;
+    height: 100%;
+    width: 100%;
+    opacity: 1;
+    background-size: cover;
+    text-align: center;
+    z-index: 800;
+}
+
+.left {
+    display: block;
+    left: 0;
+    width: 20%;
+    height: 100%;
+}
+
+.center {
+    margin: auto;
+    left: 20%;
+    width: 60%;
+    height: 100%;
+}
+
+.centertop {
+    display: block;
+    position: absolute;
+    height: 80%;
+    width: 100%;
+}
+
+.centerbottom {
+    display: block;
+    position: absolute;
+    top: 80%;
+    height: 20%;
+    width: 100%;
+}
+
+.right {
+    display: block;
+    left: 80%;
+    width: 20%;
+    height: 100%;
+}
+
+.wrapper > div {
+    position: absolute;
+    float: left;
+    /*background: yellow;*/
+}
+
+#gameCanvas canvas {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+#hud {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+}
+
+.playerCard {
+    background: lightblue;
+    box-shadow: -6px 0 0 0 blue, 6px 0 0 0 blue, 0 -2px 0 0 blue, 0 2px 0 0 blue;
+    padding: 8px;
+    max-width: 210px;
+    height: 80px;
+    max-height: 80px;
+    margin: 8px;
+    overflow: hidden;
+}
+
+.playerName, .playerScore {
+    font-weight: bold;
+    margin: 0 4px 0 4px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-wrap: none;
+}
+
+.descriptionBox {
+    background-color: #ff7627;
+    padding: 8px;
+    display: none;
+    box-shadow: -3px 0 0 0 yellow, 3px 0 0 0 yellow;
+}
+
+.grayscale * {
+    background-color: transparent !important;
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: grayscale(100%);
+    filter: url(grayscale.svg); /* Firefox 4+ */
+    filter: gray; /* IE 6-9 */
+}
+
+.characterCard {
+    overflow: auto;
+    width: 100%;
+    box-shadow: -4px 0 0 0 orange, 4px 0 0 0 orange;
+    background: red;
+}
+
+.selectButton {
+    width: 100%;
+    text-align: center;
+    background: red;
+    box-shadow: -4px 0 0 0 orange, 4px 0 0 0 orange;
+    font-size: x-large;
+    text-shadow: -2px 0 0 yellow;
+    color: orange;
+}
+
+.selectButton:hover {
+    cursor: pointer;
+    background: #ff2600;
+}
+
+input.input {
+    margin: 0;
+    font-size: large;
+    color: #ffdd05;
+    cursor: pointer;
+    border-top: #ffff00 dashed 1px;
+    border-bottom: #ffff00 dashed 1px;
+}
+
+.input {
+    background: red;
+    box-shadow: -4px 0 0 0 orange, 4px 0 0 0 orange;
+    border: 0;
+    font-family: "Minecraftia";
+    text-align: center;
+    width: 100%;
+    color: orange;
+}
+
+.avatar {
+    margin: 0 6px 0 6px;
+    float: left;
+    height: 80px;
+    width: 80px;
+    background-image: url('/img/avatars.png');
+    background-color:transparent;
+}
+
+.characterCard .avatar{
+    cursor: pointer;
+    margin: 0 6px 0 6px;
+    float: left;
+    height: 80px;
+    width: 80px;
+    background-image: url('/img/avatars.png');
+    background-color: #ff7627;
+}
+
+.avatar1 {
+    background-position: 0 0;
+}
+
+.avatar2 {
+    background-position: -80px 0;
+
+}
+
+.avatar3 {
+    background-position: -160px 0;
+
+}
+
+.avatar4 {
+    background-position: -240px 0;
+
+}
+
+.avatar5 {
+    background-position: -320px 0;
+
+}
+.avatar0 {
+    background-position: -400px 0;
+}
+
+#sound-label {
+    display: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+.loginBox{
+    z-index: 900;
+    position: absolute;
+}
+#sound-label {
+	display: none;
+	cursor: pointer;
+	text-align: center;
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="css/style.css" type="text/css"/>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.1.5/angular.min.js"></script>
+    <script src="http://cdn.firebase.com/v0/firebase.js"></script>
+    <script src="http://cdn.firebase.com/libs/angularfire/0.3.0/angularfire.min.js"></script>
+    <!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>-->
+    <script type="text/javascript" src="js/ext/jquery-1.8.2.js"></script>
+    <script type="text/javascript" async src="js/ext/socket.io.js"></script>
+    <script type="text/javascript" src="js/ext/pixi.js"></script>
+    <script type="text/javascript" src="js/ext/Box2dWeb-2.1.a.3.min.js"></script>
+    <script type="text/javascript" src="js/angularBack.js"></script>
+</head>
+<body ng-app="animalbrawl" ng-controller="PlayersController">
+<!-- Veil to cover the page while loading -->
+<iframe src="http://nodeknockout.com/iframe/madison-ivy" frameborder="0" scrolling="no" allowtransparency="true"
+        width="115" height="25">
+</iframe>
+<div class="loadingVeil">LOADING</div>
+<div class="center loginBox" ng-controller="LoginController">
+    <logincard/>
+</div>
+<div class="waitingVeil">WAITING IN THE QUEUE</div>
+<!-- Wrapper to wrap around the context -->
+<div class="wrapper">
+    <!-- Panel for the own team -->
+    <input type="hidden" ng-model="me.id" id="myId"/>
+
+    <div class="left">
+        <div ng-repeat="player in players | orderBy:'id':false | limitTo:upperHalf()">
+            <playercard playername="{{player.name}}" playerscore="{{player.score}}"
+                        character="{{player.character}}"></playercard>
+        </div>
+    </div>
+    <!-- Panel for the game and the game messages -->
+    <div class="center">
+        <!-- The game canvas and the Hover User Display -->
+        <div class="centertop">
+            <!-- Overlaying layer for popups, marks, text, etc -->
+            <div id="hud"></div>
+            <!-- The main game display element -->
+
+            <div width="800" height="600" id="gameCanvas">
+                <canvas width="800" height="600" id="debug"></canvas>
+            </div>
+        </div>
+        <div class="centerbottom" ng-repeat="player in players | filter:me |limitTo:1">
+            <playercard playername="{{player.name}}" playerscore="{{player.score}}"
+                        character="{{player.character}}"></playercard>
+        </div>
+    </div>
+    <!-- Panel for the enemy team -->
+    <div class="right">
+        <div id="sound-label">sound on</div>
+        <div ng-repeat="player in players | orderBy:'id':true | limitTo:lowerHalf()">
+            <playercard playername="{{player.name}}" playerscore="{{player.score}}"
+                        character="{{player.character}}"></playercard>
+        </div>
+    </div>
+</div>
+<audio id="sound" loop>
+    <source src="/media/queens_of_the_stone_age_i_wanna_make_it_wit_chu_live.mp3" type="audio/mp3"/>
+</audio>
+<script type="text/javascript" async src="js/bundle.js"></script>
+</body>
+</html>

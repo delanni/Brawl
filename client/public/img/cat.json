@@ -1,0 +1,68 @@
+{"frames": {
+    "stand":
+    {
+        "frame": {"x":10,"y":0,"w":80,"h":100},
+        "rotated": false,
+        "trimmed": false,
+        "spriteSourceSize": {"x":10,"y":0,"w":80,"h":100},
+        "sourceSize": {"w":80,"h":100}
+    },
+	"crawl":
+    {
+        "frame": {"x":110,"y":0,"w":80,"h":100},
+        "rotated": false,
+        "trimmed": false,
+        "spriteSourceSize": {"x":110,"y":0,"w":80,"h":100},
+        "sourceSize": {"w":80,"h":100}
+    },
+	"stretch1":
+    {
+        "frame": {"x":210,"y":0,"w":80,"h":100},
+        "rotated": false,
+        "trimmed": false,
+        "spriteSourceSize": {"x":210,"y":0,"w":80,"h":100},
+        "sourceSize": {"w":80,"h":100}
+    },
+	"stretch2":
+    {
+        "frame": {"x":310,"y":0,"w":80,"h":100},
+        "rotated": false,
+        "trimmed": false,
+        "spriteSourceSize": {"x":310,"y":0,"w":80,"h":100},
+        "sourceSize": {"w":80,"h":100}
+    },
+	"stretch3":
+    {
+        "frame": {"x":410,"y":0,"w":80,"h":100},
+        "rotated": false,
+        "trimmed": false,
+        "spriteSourceSize": {"x":410,"y":0,"w":80,"h":100},
+        "sourceSize": {"w":80,"h":100}
+    },
+	"fall":
+    {
+        "frame": {"x":510,"y":0,"w":80,"h":100},
+        "rotated": false,
+        "trimmed": false,
+        "spriteSourceSize": {"x":510,"y":0,"w":80,"h":100},
+        "sourceSize": {"w":80,"h":100}
+    },
+	"jump":
+    {
+        "frame": {"x":6100,"y":0,"w":80,"h":100},
+        "rotated": false,
+        "trimmed": false,
+        "spriteSourceSize": {"x":610,"y":0,"w":80,"h":100},
+        "sourceSize": {"w":80,"h":100}
+    }
+   },
+    "meta": {
+        "app": "madison-ivy",
+        "version": "1.0",
+        "image": "cat.png",
+        "format": "RGBA8888",
+        "size": {"w":700,"h":100},
+        "scale": "1",
+        "smartupdate": "$TexturePacker:SmartUpdate:9e3e5afd01ea8e418afabfbdcd724485$"
+    }
+}
